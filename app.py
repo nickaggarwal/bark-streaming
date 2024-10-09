@@ -9,7 +9,7 @@ import nltk
 class InferlessPythonModel:
     
     def initialize(self):
-        preload_models()
+        preload_models(use_small=True)
         nltk.download('punkt')
         nltk.download('punkt_tab')
         
