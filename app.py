@@ -5,11 +5,14 @@ import io
 import base64
 import soundfile as sf
 import nltk
+import os
+os.environ["SUNO_OFFLOAD_CPU"] = "True"
+os.environ["SUNO_USE_SMALL_MODELS"] = "True"
 
 class InferlessPythonModel:
     
     def initialize(self):
-        preload_models(use_small=True)
+        preload_models()
         nltk.download('punkt')
         nltk.download('punkt_tab')
         
